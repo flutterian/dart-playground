@@ -29,10 +29,17 @@ void main() {
   print(newBlackPink); // (블랙핑크 리사, 블랙핑크 지수, 블랙핑크 제니, 블랙핑크 파스타)
   print(newBlackPink.toList()); // [블랙핑크 리사, 블랙핑크 지수, 블랙핑크 제니, 블랙핑크 파스타]
 
-  /** reduce() 함수 ~ JS: reduce(), iterable 말고 List 멤버의 타입과 동일한 타입 반환 */
+  /** reduce() 함수 ~ JS: reduce(), iterable 말고 List 멤버의 타입과 동일한 타입 반환, 리스트 요소들의 타입이 모두 같아야함. */
   final allMembers = blackPinkList.reduce(
     (value, element) => '$value, $element',
   );
   print(allMembers); // 리사, 지수, 제니, 파스타
   print(allMembers.runtimeType); // String
+
+  /** fold() 함수 - map 이랑 실행 논리는 동일하나 어떠한 타입이든 반환 가능 */
+  final allMembers2 = blackPinkList.fold<int>(
+    0,
+    (value, element) => value + element.length,
+  );
+  print(allMembers2); // 9 (0 + 2 + 2 + 2 + 3) 각 이름의 길이를 더한 값.
 }
