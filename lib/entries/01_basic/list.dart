@@ -8,15 +8,20 @@ void main() {
   print(blackPinkList.length); // 4
 
   blackPinkList[3] = '파스타';
-
   print(blackPinkList); // [리사, 지수, 제니, 파스타]
 
-  // add() 함수 ~ push()
+  // add() 함수 ~ JS: push() 느낌
   blackPinkList.add('테스트');
   print(blackPinkList); // [리사, 지수, 제니, 파스타, 테스트]
 
-  // removeLast() 함수 ~ pop()
+  // removeLast() 함수 ~ JS: pop() 느낌
   String last = blackPinkList.removeLast();
   print(blackPinkList); // [리사, 지수, 제니, 파스타]
   print(last); // 테스트
+
+  // where() 함수 ~ JS: filter() 느낌, 반환 값이 달라지긴함.
+  final newList = blackPinkList.where((name) => name == '리사' || name == '지수');
+
+  print(newList); // (리사, 지수) - iterable이 반환됨.
+  print(newList.toList()); // [리사, 지수]
 }
