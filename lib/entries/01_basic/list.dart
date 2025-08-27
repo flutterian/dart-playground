@@ -28,4 +28,11 @@ void main() {
   final newBlackPink = blackPinkList.map((name) => '블랙핑크 $name');
   print(newBlackPink); // (블랙핑크 리사, 블랙핑크 지수, 블랙핑크 제니, 블랙핑크 파스타)
   print(newBlackPink.toList()); // [블랙핑크 리사, 블랙핑크 지수, 블랙핑크 제니, 블랙핑크 파스타]
+
+  /** reduce() 함수 ~ JS: reduce(), iterable 말고 List 멤버의 타입과 동일한 타입 반환 */
+  final allMembers = blackPinkList.reduce(
+    (value, element) => '$value, $element',
+  );
+  print(allMembers); // 리사, 지수, 제니, 파스타
+  print(allMembers.runtimeType); // String
 }
