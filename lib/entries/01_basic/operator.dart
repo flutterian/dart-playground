@@ -29,4 +29,20 @@ void main() {
 
   number %= 3;
   print(number); // 2.0
+
+  /// null 관련 연산자
+  /// 타입 뒤에 ?를 명시해서 null을 가질 수 있다.
+  double? number1 = 1;
+
+  // 타입 뒤에 ?를 명시하지 않아 에러가 남
+  // double number2 = null; // 에러남.
+
+  double? number3; // 자동으로 null 값 저장
+  print(number3); // null
+
+  number3 ??= 3; // ?? 사용하면 기존 값이 null일 때만 저장됨
+  print(number3); // 3.0
+
+  number3 ??= 4; // null이 아니므로 기존 값인 3으로 유지.
+  print(number3); // 3.0
 }
