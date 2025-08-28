@@ -56,4 +56,12 @@ void main() {
   print(number4 <= number5); // true
   print(number4 == number5); // false
   print(number4 != number5); // true
+
+  /// 타입 비교 연산자
+  int number6 = 1;
+
+  print(number6 is int); // true
+  print(number6 is String); // false
+  print(number6 is! int); // false
+  print(number6 is! String); // true
 }
