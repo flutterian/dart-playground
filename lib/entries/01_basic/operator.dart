@@ -43,6 +43,17 @@ void main() {
   number3 ??= 3; // ?? 사용하면 기존 값이 null일 때만 저장됨
   print(number3); // 3.0
 
-  number3 ??= 4; // null이 아니므로 기존 값인 3으로 유지.
-  print(number3); // 3.0
+  // number3 ??= 4; // null이 아니므로 기존 값인 3으로 유지.
+  // print(number3); // 3.0
+
+  /// 값 비교 연산자
+  int number4 = 1;
+  int number5 = 2;
+
+  print(number4 > number5); // false
+  print(number4 < number5); // true
+  print(number4 >= number5); // false
+  print(number4 <= number5); // true
+  print(number4 == number5); // false
+  print(number4 != number5); // true
 }
