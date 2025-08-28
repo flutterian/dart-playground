@@ -64,4 +64,20 @@ void main() {
   print(number6 is String); // false
   print(number6 is! int); // false
   print(number6 is! String); // true
+
+  /// 논리 연산자
+  bool result = 12 > 10 && 1 > 0;
+  print(result); // true
+
+  bool result2 = 12 > 10 && 0 > 1;
+  print(result2); // false
+
+  bool result3 = 12 > 10 || 1 > 0;
+  print(result3); // true
+
+  bool result4 = 12 > 10 || 0 > 1;
+  print(result4); // true
+
+  bool result5 = 12 < 10 || 0 > 1;
+  print(result5); // false
 }
