@@ -47,4 +47,20 @@ void main() {
   // 3
   // 6
   // 9
+
+  /// whil문과 do...while문
+  int total = 0;
+
+  while (total < 10) {
+    total++;
+  }
+  print('total: $total');
+
+  int total2 = 0;
+
+  do {
+    total2++;
+  } while (total2 < 10);
+
+  print('total2: $total2');
 }
