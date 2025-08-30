@@ -30,4 +30,21 @@ void main() {
   }
 
   print(Status.values);
+
+  /// for 문
+  for (int i = 0; i < 3; i++) {
+    print(i);
+  }
+  // 0
+  // 1
+  // 2
+
+  final List<int> numberList = [3, 6, 9];
+  for (final int number in numberList) {
+    print(number);
+  }
+
+  // 3
+  // 6
+  // 9
 }
