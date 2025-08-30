@@ -1,1 +1,25 @@
 include: package:flutter_lints/flutter.yaml
+
+linter:
+  rules:
+    # 스타일
+    prefer_single_quotes: true
+    sort_constructors_first: true
+
+    # 위젯/성능
+    prefer_const_constructors: true
+    use_key_in_widget_constructors: true
+
+    # 임포트 일관성
+    always_use_package_imports: true
+
+    # 비동기 안전망
+    unawaited_futures: true
+    discarded_futures: true
+
+    # 불변성 지향
+    prefer_final_locals: true
+    prefer_final_in_for_each: true
+
+    # 개발 중 출력 억제
+    avoid_print: true
