@@ -39,3 +39,10 @@ class GirlGroup implements Idol {
     print('$name 멤버는 $membersCount명 입니다!!');
   }
 }
+
+void main() {
+  final GirlGroup blackPink = GirlGroup('블랙핑크', 4);
+
+  blackPink.sayName(); // 저는 여자 아이돌 블랙핑크입니다.
+  blackPink.sayMembersCount(); // 블랙핑크 멤버는 4명 입니다!!
+}
