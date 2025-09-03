@@ -7,5 +7,5 @@ void main() {
   // error: The getter '_name' isn't defined for the class 'Idol'.
   // 아예 정의되어 있지 않다면서 에러 발생
   // (프라이빗 식별자 `_`는 같은 라이브러리(보통 같은 파일)에서만 접근 가능)
-  print(idol._name); // <- 접근 불가 예시, 에러남.
+  // print(idol._name); // <- 접근 불가 예시, 에러남.
 }
