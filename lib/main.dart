@@ -1,3 +1,7 @@
+import 'package:dart_playground/entries/05_navigation/screen/four_screen.dart';
+import 'package:dart_playground/entries/05_navigation/screen/one_screen.dart';
+import 'package:dart_playground/entries/05_navigation/screen/three_screen.dart';
+import 'package:dart_playground/entries/05_navigation/screen/two_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -9,12 +13,14 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
+    return MaterialApp(
+      initialRoute: '/one',
+      routes: {
+        '/one': (context) => const OneScreen(),
+        '/two': (context) => const TwoScreen(),
+        '/three': (context) => const ThreeScreen(),
+        '/four': (context) => const FourScreen(),
+      },
     );
   }
 }
