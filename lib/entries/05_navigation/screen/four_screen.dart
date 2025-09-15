@@ -7,7 +7,7 @@ class FourScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: const Text('FourScreen')),
+        appBar: AppBar(title: const Text('FourScreen'), centerTitle: true),
         body: Container(
           color: Colors.cyan,
           child: Center(

@@ -7,7 +7,7 @@ class TwoScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: const Text('TwoScreen')),
+        appBar: AppBar(title: const Text('TwoScreen'), centerTitle: true),
         body: Container(
           color: Colors.green,
           child: Center(

@@ -7,7 +7,7 @@ class OneScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: const Text('OneScreen')),
+        appBar: AppBar(title: const Text('OneScreen'), centerTitle: true),
         body: Container(
           color: Colors.red,
           child: Center(

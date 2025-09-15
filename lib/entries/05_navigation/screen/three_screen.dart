@@ -7,7 +7,7 @@ class ThreeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: const Text('ThreeScreen')),
+        appBar: AppBar(title: const Text('ThreeScreen'), centerTitle: true),
         body: Container(
           color: Colors.yellow,
           child: Center(
