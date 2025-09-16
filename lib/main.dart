@@ -18,8 +18,23 @@ class MainApp extends StatelessWidget {
       routes: {
         '/one': (context) => const OneScreen(),
         '/two': (context) => const TwoScreen(),
-        '/three': (context) => const ThreeScreen(),
-        '/four': (context) => const FourScreen(),
+        // routes 랑 onGenerateRoute 같이 정의하면 routes 가 우선된다.
+        // '/three': (context) => const ThreeScreen(),
+        // '/four': (context) => const FourScreen(),
+      },
+      onGenerateRoute: (settings) {
+        if (settings.name == '/three') {
+          final arg = settings.arguments;
+          if (arg != null) {
+            return MaterialPageRoute(
+              builder: (context) => const ThreeScreen(),
+              settings: settings,
+            );
+          } else {
+            return MaterialPageRoute(builder: (context) => const FourScreen());
+          }
+        }
+        return null;
       },
     );
   }

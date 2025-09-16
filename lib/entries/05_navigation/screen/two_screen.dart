@@ -34,6 +34,12 @@ class TwoScreen extends StatelessWidget {
                 ),
                 ElevatedButton(
                   onPressed: () {
+                    Navigator.pushNamed(context, '/three');
+                  },
+                  child: const Text('Go Three no param'),
+                ),
+                ElevatedButton(
+                  onPressed: () {
                     Navigator.pop(context, 'world');
                   },
                   child: const Text('Pop'),
