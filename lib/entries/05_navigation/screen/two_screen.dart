@@ -5,6 +5,10 @@ class TwoScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final int arg = ModalRoute.of(context)?.settings.arguments as int;
+
+    print(arg);
+
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(title: const Text('TwoScreen'), centerTitle: true),
@@ -20,13 +24,17 @@ class TwoScreen extends StatelessWidget {
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, '/three');
+                    Navigator.pushNamed(
+                      context,
+                      '/three',
+                      arguments: {'arg1': 10, 'arg2': 'hello'},
+                    );
                   },
                   child: const Text('Go Three'),
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    Navigator.pop(context);
+                    Navigator.pop(context, 'world');
                   },
                   child: const Text('Pop'),
                 ),

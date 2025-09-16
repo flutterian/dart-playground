@@ -5,6 +5,11 @@ class ThreeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Map<String, Object> args =
+        ModalRoute.of(context)?.settings.arguments as Map<String, Object>;
+
+    print(args);
+
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(title: const Text('ThreeScreen'), centerTitle: true),

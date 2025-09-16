@@ -19,8 +19,13 @@ class OneScreen extends StatelessWidget {
                   style: TextStyle(color: Colors.white, fontSize: 30),
                 ),
                 ElevatedButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/two');
+                  onPressed: () async {
+                    final result = await Navigator.pushNamed(
+                      context,
+                      '/two',
+                      arguments: 10,
+                    );
+                    print(result);
                   },
                   child: const Text('Go Two'),
                 ),
