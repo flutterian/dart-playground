@@ -20,6 +20,12 @@ class FourScreen extends StatelessWidget {
                 ),
                 ElevatedButton(
                   onPressed: () {
+                    Navigator.pushNamed(context, '/five');
+                  },
+                  child: const Text('Go Five'),
+                ),
+                ElevatedButton(
+                  onPressed: () {
                     Navigator.pop(context);
                   },
                   child: const Text('Pop'),

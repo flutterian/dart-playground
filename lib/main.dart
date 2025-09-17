@@ -1,3 +1,4 @@
+import 'package:dart_playground/entries/05_navigation/screen/five_screen.dart';
 import 'package:dart_playground/entries/05_navigation/screen/four_screen.dart';
 import 'package:dart_playground/entries/05_navigation/screen/one_screen.dart';
 import 'package:dart_playground/entries/05_navigation/screen/three_screen.dart';
@@ -18,6 +19,7 @@ class MainApp extends StatelessWidget {
       routes: {
         '/one': (context) => const OneScreen(),
         '/two': (context) => const TwoScreen(),
+        '/five': (context) => const FiveScreen(),
         // routes 랑 onGenerateRoute 같이 정의하면 routes 가 우선된다.
         // '/three': (context) => const ThreeScreen(),
         // '/four': (context) => const FourScreen(),
