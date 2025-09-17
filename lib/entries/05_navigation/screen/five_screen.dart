@@ -1,3 +1,4 @@
+import 'package:dart_playground/entries/05_navigation/user.dart';
 import 'package:flutter/material.dart';
 
 class FiveScreen extends StatelessWidget {
@@ -5,6 +6,11 @@ class FiveScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Map<String, Object> args =
+        ModalRoute.of(context)?.settings.arguments as Map<String, Object>;
+
+    print(args);
+
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(title: const Text('FiveScreen'), centerTitle: true),
@@ -20,7 +26,7 @@ class FiveScreen extends StatelessWidget {
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    Navigator.pop(context);
+                    Navigator.pop(context, User('Lee', 'busan'));
                   },
                   child: const Text('Pop'),
                 ),

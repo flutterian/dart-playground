@@ -1,3 +1,4 @@
+import 'package:dart_playground/entries/05_navigation/user.dart';
 import 'package:flutter/material.dart';
 
 class FourScreen extends StatelessWidget {
@@ -19,8 +20,18 @@ class FourScreen extends StatelessWidget {
                   style: TextStyle(color: Colors.white, fontSize: 30),
                 ),
                 ElevatedButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/five');
+                  onPressed: () async {
+                    final result = await Navigator.pushNamed(
+                      context,
+                      '/five',
+                      arguments: {
+                        'arg1': 10,
+                        'arg2': 'hello',
+                        'arg3': User('BM', 'seoul'),
+                      },
+                    );
+
+                    print('result: ${(result as User).name}');
                   },
                   child: const Text('Go Five'),
                 ),
